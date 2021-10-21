@@ -8,7 +8,6 @@ __pycache__/
 
 #custom
 savedmodels
-Datasets
 .vscode
 .ipynb_checkpoints
 __pycache__
