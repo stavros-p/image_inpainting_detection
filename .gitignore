@@ -6,6 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+#custom
+savedmodels
+Datasets
+.vscode
+.ipynb_checkpoints
+__pycache__
+Models
+
+
 # Distribution / packaging
 .Python
 build/
