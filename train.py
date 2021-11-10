@@ -4,7 +4,7 @@ Train implementation for HP - FCN.
 Code Implementation: Stavros Papadopoulos
 May 2021
 """
-
+from __future__ import annotations
 from numpy.core.fromnumeric import argmax
 from numpy.core.shape_base import block
 import torch
@@ -69,6 +69,18 @@ class InpaintingForensics():
         self.val_loader = DataLoader(dataset=val_dataset, batch_size=1, shuffle=False, num_workers=0)
         self.test_loader = DataLoader(dataset=test_dataset, batch_size=1, shuffle=False, num_workers=0)
 
+    @staticmethod
+    def create(type: str, weights: str) -> InpaintingForensics:
+        res = InpaintingForensics()
+        if type=='hp':
+            res.net = resnet.ResNet(block=resnet.block)
+        else:
+            res.seg_hrnet_config = my_config.config
+            my_config.update_config(res.seg_hrnet_config, args=g_my_args)
+            res.net = seg_hrnet.HighResolutionNet(res.seg_hrnet_config)
+        res.net.load_state_dict(torch.load(weights))
+        return res
+        
     def train(self):
         '''
         Steps of Training
