@@ -7,6 +7,7 @@ Image inpainting is the process of repairing an area in an image, from which a p
  # Depedency 
  - Python 3
  - Torch 1.81
+ - visdom 0.1.8.9
 
  # Usage 
 To test the network use must give the following args:
