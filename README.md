@@ -10,8 +10,8 @@ Image inpainting is the process of repairing an area in an image, from which a p
 
  # Usage 
 To test the network use must give the following args:
-- **net_type**: 'hp' and 'hrnet' are acceptable. The first one to use the hp architecture and thw 2nd one to use the hrnet architecture
-- **mask_type**: 'random' and 'object' are acceptable. The first one is to use a network that has trained on random form masks while the second one ise to use a network that has trained on semantic-object masks.
+- **net_type**: '_hp_' and '_hrnet_' are acceptable. The first one to use the hp architecture and thw 2nd one to use the hrnet architecture
+- **mask_type**: '_random_' and '_object_' are acceptable. The first one is to use a network that has trained on random form masks while the second one ise to use a network that has trained on semantic-object masks.
 - **check_epochs**: 10 and 50 are acceptable. 10 is to use a network that has trained for 10 epochs while 50 is to use a network that has trained for 50 epochs.
 - **threshold**: (0.0, 1.0). The threshold value to round up the values of predictes masks
 
