@@ -8,7 +8,7 @@ Image inpainting is the process of repairing an area in an image, from which a p
  - Python 3
  - Torch 1.81
 
- # Depedency 
+ # Usage 
 To train or thes the network:
 ```
 python main.py {train, test}
